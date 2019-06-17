@@ -1,9 +1,8 @@
 <?php
     try{
         
-        $conexao = mysqli_connect("localhost", "andersonrf", "", "bd_mobile");
-                                    //Servidor  usuário     senha   banco
-                                    
+        $conexao = mysqli_connect("localhost", "andersonrf", "", "bd_cdbarras");
+
         $nome = $_POST['nome'];
         $cod = $_POST['cod'];
         $valor = $_POST['valor'];
