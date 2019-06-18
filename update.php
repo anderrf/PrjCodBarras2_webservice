@@ -3,7 +3,7 @@
         $conexao = mysqli_connect("localhost","andersonrf","","bd_cdbarras"); 
 
         $nome = $_POST['nome'];
-        $cod = $_POST['cod'];
+        $codigo = $_POST['codigo'];
         $valor = $_POST['valor'];
         $descricao = $_POST['descricao'];
         $processador = $_POST['processador'];
@@ -16,7 +16,7 @@
         
         $query = "update celular set 
         nome='$nome',
-        cod='$cod',
+        codigo='$codigo',
         valor='$valor',
         descricao='$descricao',
         processador='$processador',
@@ -26,10 +26,10 @@
         qtcam='$qtcam',
         rescam='$rescam',
         memflash='$memflash'
-        where id = $id";
+        where codigo = $codigo";
         
         mysqli_query($conexao,$query);
-        echo "alteração realizado com sucesso";
+        echo "alteração realizada com sucesso";
     } catch (Exception $e ) {
         echo "Erro ao cadastrar: ".$e;
     }

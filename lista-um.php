@@ -2,9 +2,9 @@
     try {
         $conexao = mysqli_connect("localhost", "andersonrf", "", "bd_cdbarras");
 
-        $id = $_GET['id'];
+        $codigo = $_GET['codigo'];
         
-        $query = "SELECT * FROM celular WHERE id = $id";
+        $query = "SELECT * FROM celular WHERE codigo = $codigo";
         
         
         $resultado = mysqli_query($conexao,$query);
@@ -13,7 +13,7 @@
              
         $registro = array(
             'celular'=>array(
-                'id' => $linha['id'],
+                'cd' => $linha['cd'],
                 'nome' => $linha['nome'],
                 'codigo' => $linha['codigo'],
                 'valor' => $linha['valor'],

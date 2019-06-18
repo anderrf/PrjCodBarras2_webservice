@@ -3,7 +3,7 @@
         $conexao = mysqli_connect("localhost", "andersonrf", "", "bd_cdbarras");
 
         
-        $query = "select * from celular order by id asc";
+        $query = "select * from celular order by cd asc";
         
         
         $resultado = mysqli_query($conexao,$query);

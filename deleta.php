@@ -2,9 +2,9 @@
     try {
         $conexao = mysqli_connect("localhost","andersonrf","","bd_cdbarras"); 
         
-        $id = $_GET['id'];
+        $cd = $_GET['cd'];
         
-        $query = "delete from celular where id = $id";
+        $query = "delete from celular where cd = $cd";
         
         mysqli_query($conexao,$query);
         echo "registro removido com sucesso";
